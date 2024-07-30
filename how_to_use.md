@@ -1,4 +1,4 @@
-## 如何通过make run命令使用：
+## 何通过make run命令使用：
 - 进入根目录下，使用make run并传递参数可以直接使用
 - make run接受两个参数platform和type，platform的值可以是bili或者dy，type默认等于search
 - 可以使用make run platform=bili或者是make run platform=bili type=search进行使用
@@ -15,3 +15,7 @@
 - 数据通过bili_save.py和dy_save.py脚本进行保存
 - 脚本中已包含排序去重功能，默认按照Likes（点赞数）排序
 - 排序功能可以通过进入bili_save.py和dy_save.py中，将True修改为False关闭
+
+## make clean 和 make clean_all
+- make clean清除data目录下的所有文件，防止文件积累
+- make clean_all清除date和json_data目录下所有文件

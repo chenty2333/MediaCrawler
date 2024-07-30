@@ -20,7 +20,7 @@ schedule:
 	python SCRIPT/scheduler.py $(platform) $(type) $(sleep) $(times)
 
 clean:
-	rm -f data/*
+	rm -rf data/*
 
 clean_all: clean
 	rm -f json_data/*
