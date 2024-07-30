@@ -3,7 +3,11 @@ import sys
 import os
 
 def save_data(data, sort_by_likes=True):  # 默认值为True
-    file_path = "json_data/bili_data.json"
+    directory = "json_data"
+    file_path = os.path.join(directory, "bili_data.json")
+    
+    if not os.path.exists(directory):
+        os.makedirs(directory)
     
     if os.path.exists(file_path):
         with open(file_path, 'r') as file:
@@ -23,6 +27,8 @@ def save_data(data, sort_by_likes=True):  # 默认值为True
         json.dump(list(unique_data), file, ensure_ascii=False, indent=4)
 
 def parse_input(input_data):
+    if not input_data.strip():
+        return []
     entries = input_data.strip().split('----------------------------------------')
     data = []
 
