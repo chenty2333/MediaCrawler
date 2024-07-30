@@ -1,6 +1,6 @@
 # 基础配置
 PLATFORM = "bilibili"  # 平台名称
-KEYWORDS = "影视飓风"
+KEYWORDS = "奥运"
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
 COOKIES = ""
 # 具体值参见media_platform.xxx.field下的枚举值，暂时只支持小红书
